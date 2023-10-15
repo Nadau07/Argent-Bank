@@ -1,0 +1,59 @@
+.body-connexion{
+    position:relative;
+    height:750px;
+    background-color: #12002b;
+    font-family: 'Arial';
+}
+
+
+.modale-connexion{
+    width: 300px;
+    text-align: center;
+    position:absolute;
+    background-color: white;
+    padding:2rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.modale-connexion-title{
+    font-size:1.5rem; 
+}
+
+.modale-connexion-form{
+    display:flex;
+    flex-direction: column;
+}
+
+.modale-connexion-label{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+.modale-connexion-input{
+    padding:5px;
+    font-size:1.2rem;
+    margin-bottom:16px;
+}
+
+.checkbox{
+    display: flex;
+}
+
+.modale-connexion-button{
+    font-weight: bold;
+    border-color: #00bc77;
+    background-color: #00bc77;
+    color:white;
+    margin-top:1rem;
+    padding:8px;
+    font-size:1.1rem;
+    cursor: pointer;
+
+}
+
+.modale-connexion-button:hover{
+    text-decoration: underline;
+}

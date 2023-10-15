@@ -1,0 +1,49 @@
+*{
+    width: 100%;
+}
+.nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top:5px;
+}
+
+.image_banner_logo{
+    max-width: 100%;
+    width: 200px;
+    cursor:pointer;
+}
+
+.sign-in-content{
+    font-weight: bold;
+    cursor:pointer;
+    font-family: 'Arial';
+}
+
+.sign-in{
+    text-decoration: none;
+    color: #2c3e50;
+}
+.sign-in:hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 920px){
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+}
+.image_banner_logo{
+    float:left;
+}
+.sign-in-content{
+    display:flex;
+    text-align: right;
+    width: 15%;
+}
+.sign-in{
+    margin-right:10px;
+}
+
+}
