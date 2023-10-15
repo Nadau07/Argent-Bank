@@ -15,7 +15,7 @@ function Banner() {
    
    <div className="sign-in-content">
 
-   <i class="fa fa-user-circle sign-in-icon"></i>
+   <i className="fa fa-user-circle sign-in-icon"></i>
  
         <NavLink to={`/SignIn`} className="sign-in">Sign In</NavLink>
 

@@ -8,7 +8,7 @@ function SignIn(){
 <div className="body-connexion">
 
     <div className="modale-connexion">
-        <i class="fa fa-user-circle sign-in-icon"></i>
+        <i className="fa fa-user-circle sign-in-icon"></i>
         <h1 className="modale-connexion-title">Sign In</h1>
         <form className="modale-connexion-form">
             <label className="modale-connexion-label">Username</label>
