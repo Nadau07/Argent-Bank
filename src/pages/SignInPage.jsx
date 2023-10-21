@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "../composants/Banner";
-import SignIn from "../composants/SignIn";
-import Footer from "../composants/Footer";
+import Banner from "../components/Banner";
+import SignIn from "../components/SignIn";
+import Footer from "../components/Footer";
 
 function SignInPage(){
     return(

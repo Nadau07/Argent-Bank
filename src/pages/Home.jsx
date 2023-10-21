@@ -1,8 +1,8 @@
 import React from "react";
-import Banner from "../composants/Banner"
-import Header from "../composants/Header"
-import Body from "../composants/Body"
-import Footer from "../composants/Footer"
+import Banner from "../components/Banner"
+import Header from "../components/Header"
+import Body from "../components/Body"
+import Footer from "../components/Footer"
 
 function Home(){
     return(
