@@ -7,7 +7,8 @@ import User from './pages/User'
 import SignInPage from './pages/SignInPage';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import {redux} from './services/redux'
+import { store } from "./services/redux";
+
 
 
 
@@ -17,8 +18,8 @@ import {redux} from './services/redux'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={redux}>
-  <Router>
+    <Provider store={store}>
+         <Router>
     <Routes>
       <Route>
         <Route path='/' element={<Home/>}/>
@@ -28,6 +29,9 @@ root.render(
     </Routes>
   </Router>
     </Provider>
+    
+
+ 
     </React.StrictMode>
 
 );

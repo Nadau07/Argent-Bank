@@ -1,48 +1,47 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
-//Se servir de Slice pour combiner createAction et createReducer en une seule action
+import {configureStore, createSlice} from "@reduxjs/toolkit";
 
 
-//Etat initial 
-const initialState = {
-  userName: localStorage.getItem('userName'),
-  firstName: localStorage.getItem('firstName'),
-  lastName: localStorage.getItem('lastName'),
-  token: null,
-};
+//Creation de l'état actuel -  reducer : sert pour les interactions avec l'etat actuel
+const infoSlice = createSlice({
+    name: "user",
 
-const userSlice = createSlice({
-  name: 'user',
-  initialState,
-  reducers: {
-    Token: (state, action) => {
-      state.token = action.payload;
+    initialState: {
+        token:null,
+        userName: localStorage.getItem('userName'),
+        firstName: localStorage.getItem('firstName'),
+        lastName: localStorage.getItem('lastName'),
+
     },
-    UserName: (state, action) => {
-      state.userName = action.payload;
+
+    reducers: {
+        LoginSuccess : (state, action) =>{
+           // type: user/LoginSuccess
+           state.token = action.payload;
+        },
+        LoginFailure : (state, action) =>{
+            // type: user/LoginFailure
+            state.token = null;
+        },
+        LogOut : (state, action) => {
+            // type: user/LogOut
+            state.token = null;
+        },
+        EditUser : (state, action) =>{
+            //type: user/EditUser
+            state.userName = action.payload.userName;
+            state.firstName = action.payload.firstName;
+            state.lastName = action.payload.lastName;
+        },
     },
-    FirstName: (state, action) => {
-      state.firstName = action.payload;
+});
+/**J'englobe tous mes reducers("slices"/"actions") dans mon store , 
+ et je met le store au provider pour 
+ qu'il soit accessible a l'ensemble de mes composants
+**/
+export const store = configureStore({
+    reducer: {
+        user : infoSlice.reducer,
     },
-    LastName: (state, action) => {
-      state.lastName = action.payload;
-    },
-    resetUser: (state) => initialState,
-  },
 });
 
-//Action exportées pour être utiliser ailleurs 
-export const {
-  Token,
-  UserName,
-  FirstName,
-  LastName,
-  resetUser,
-} = userSlice.actions;
-
-
-//store creer pour gerer l'etat global et donne acces aux composants
-export const redux = configureStore({
-  reducer: {
-    user: userSlice.reducer,
-  },
-});
+export const {LoginSuccess, LogOut} = infoSlice.actions;
