@@ -23,7 +23,7 @@ export async function Login(email, password) {
 
 //RECUPERATION DU TOKEN :
 
-export async function Token(email, password) {
+export async function token(email, password) {
   const response = await Login(email, password);
   const token = response.body.token;
   localStorage.setItem('token', token);
@@ -51,21 +51,21 @@ export async function ProfileData(token) {
   return newresponse.body;
 }
 
-export async function UserName(token) {
+export async function userName(token) {
   const profileData = await ProfileData(token);
   const userName = profileData.userName;
   localStorage.setItem('userName', userName);
   return userName;
 }
 
-export async function FirstName(token) {
+export async function firstName(token) {
   const profileData = await ProfileData(token);
   const firstName = profileData.firstName;
   localStorage.setItem('firstName', firstName);
   return firstName;
 }
 
-export async function LastName(token) {
+export async function lastName(token) {
   const profileData = await ProfileData(token);
   const lastName = profileData.lastName;
   localStorage.setItem('lastName', lastName);

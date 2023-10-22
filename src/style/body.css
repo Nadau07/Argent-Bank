@@ -36,6 +36,7 @@
 
 .feature-item-p{
   text-align: center;
+  color:black;
 }
 
 @media (min-width: 920px){
