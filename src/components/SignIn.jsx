@@ -50,7 +50,7 @@ function SignIn() {
         <i className="fa fa-user-circle sign-in-icon"></i>
         <h1 className="modale-connexion-title">Connexion</h1>
         <form className="modale-connexion-form" onSubmit={FormSignIn}>
-          <label className="modale-connexion-label">Nom d'utilisateur</label>
+          <label className="modale-connexion-label">Username</label>
           <input
             className="modale-connexion-input"
             type="text"
@@ -71,7 +71,7 @@ function SignIn() {
             <label>Se souvenir de moi</label>
           </div>
           <button type="submit" className="modale-connexion-button">
-            Se connecter
+            Log In
           </button>
         </form>
       </div>
