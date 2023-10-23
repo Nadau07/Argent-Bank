@@ -18,15 +18,19 @@ export async function Login(email, password) {
     },
     body: JSON.stringify(user),
   });
+  console.log(response)
   return response;
+
 }
 
 //RECUPERATION DU TOKEN :
 
 export async function token(email, password) {
+  console.log(email,password)
   const response = await Login(email, password);
   const token = response.body.token;
   localStorage.setItem('token', token);
+  console.log(token)
   return token;
 }
 

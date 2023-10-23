@@ -22,9 +22,10 @@ function SignIn() {
   // Fonction FormSignIn : qui gère la soumission du formulaire de connexion
   const FormSignIn = async (e) => {
     e.preventDefault();
-
+    console.log("FormSignIn")
     try {
       const tokenValue = await token(formData.email, formData.password);
+      console.log(tokenValue)
       const userNameValue = await userName(tokenValue);
       const firstNameValue = await firstName(tokenValue);
       const lastNameValue = await lastName(tokenValue);
@@ -49,7 +50,7 @@ function SignIn() {
       <div className="modale-connexion">
         <i className="fa fa-user-circle sign-in-icon"></i>
         <h1 className="modale-connexion-title">Connexion</h1>
-        <form className="modale-connexion-form" onSubmit={FormSignIn}>
+        <form className="modale-connexion-form">
           <label className="modale-connexion-label">Username</label>
           <input
             className="modale-connexion-input"
@@ -70,7 +71,7 @@ function SignIn() {
             <input type="checkbox" id="remember-me" />
             <label>Se souvenir de moi</label>
           </div>
-          <button type="submit" className="modale-connexion-button">
+          <button type="submit" className="modale-connexion-button" onClick={FormSignIn}>
             Log In
           </button>
         </form>
