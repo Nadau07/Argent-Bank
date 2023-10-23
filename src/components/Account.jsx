@@ -2,13 +2,22 @@ import React from "react";
 import "../style/account.css"
 function Account(){
     return(
-        <div className="account-info">
-            <h1>Argent Bank Checking</h1>
-            <p>ARGENT</p>
-            <p>Available balance</p>
-            <button className="account-button">View transaction</button>
-
+        <>
+          <div className="bodyUser-container">
+  <div className="account">
+            <div className="account-info">
+                <p>Argent Bank Checking (x8349)</p>
+                <p>$2,082.79</p>
+                <p>Available Balance</p>
+            </div>
+            <button className="account-info-button">View transactions</button>
         </div>
+
+          </div>
+       
+      
+        
+        </>
     )
 }
 

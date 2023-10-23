@@ -1,14 +1,16 @@
 import React from "react";
 import Banner from "../components/Banner";
-import BodyUser from "../components/BodyUser";
+import Account from "../components/Account";
 import Footer from "../components/Footer";
+import EditUser from "../components/EditUser";
 
 
 function PageUser(){
     return(
 <>
 <Banner/>
-<BodyUser/>
+<EditUser/>
+<Account />
 <Footer />
 
 </>

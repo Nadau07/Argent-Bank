@@ -1,15 +1,5 @@
-.account-info{
-    background-color: white;
-    display:flex;
-    flex-direction: column;
-}
 
-h1 , p {
-    color : white
-}
-
-.account-button{
-    background-color: green;
-    color:white;
-    padding:5px;
+.bodyUser-container{
+    height:750px;
+background-color: #12002b;
 }

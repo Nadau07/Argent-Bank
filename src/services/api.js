@@ -37,6 +37,7 @@ export async function token(email, password) {
 //REQUETE POST USER PROFILE : permet de récupérer les informations d'un profil user.
 
 export async function Profile(token) {
+  console.log(token)
   let response = await fetch(`http://localhost:3001/api/v1/user/profile`, {
     method: 'POST',
     headers: {
