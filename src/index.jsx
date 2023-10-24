@@ -24,7 +24,7 @@ root.render(
       <Route>
         <Route path='/' element={<Home/>}/>
         <Route path='/SignIn' element={<SignInPage/>}/>
-        <Route path="/user" element={<User />} />
+        <Route path='/user/:userName' element={<User />} />
       </Route>
     </Routes>
   </Router>

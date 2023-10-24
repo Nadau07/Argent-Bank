@@ -53,4 +53,4 @@ export const store = configureStore({
     },
 });
 
-export const {LoginSuccess, LoginFailure} = infoSlice.actions;
+export const {LoginSuccess, LoginFailure, LogOut, EditUser} = infoSlice.actions;

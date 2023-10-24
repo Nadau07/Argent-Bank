@@ -44,7 +44,7 @@ function SignIn() {
       localStorage.setItem('firstName', firstNameValue);
       localStorage.setItem('lastName', lastNameValue);
 
-      navigate(`/user`);
+      navigate(`/user/${userName}`);
     } catch (error) {
       console.error("Échec de la connexion. Veuillez vérifier vos identifiants.", error);
       dispatch(LoginFailure());

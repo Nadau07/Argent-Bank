@@ -1,0 +1,12 @@
+.user-form{
+ padding:5px;
+}
+.user-form-cach{
+    display: none;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
