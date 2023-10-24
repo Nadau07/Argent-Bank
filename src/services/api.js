@@ -1,6 +1,3 @@
-
-
-
 //URL API: "http://localhost:3001/api/v1"
 
 
@@ -19,7 +16,7 @@ export async function Login(email, password) {
     body: JSON.stringify(user),
   });
   console.log(response)
-  return response;
+  return response.json();
 
 }
 

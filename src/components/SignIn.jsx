@@ -25,12 +25,19 @@ function SignIn() {
     console.log("FormSignIn")
     try {
       const tokenValue = await token(formData.email, formData.password);
-      console.log(tokenValue)
+     
       const userNameValue = await userName(tokenValue);
+ 
       const firstNameValue = await firstName(tokenValue);
+  
       const lastNameValue = await lastName(tokenValue);
+   
 
-      dispatch(LoginSuccess({ token: tokenValue, userName: userNameValue, firstName: firstNameValue, lastName: lastNameValue }));
+      dispatch(LoginSuccess({
+        token: tokenValue,
+        userName: userNameValue,
+        firstName: firstNameValue,
+        lastName: lastNameValue }));
 
       localStorage.setItem('token', tokenValue);
       localStorage.setItem('userName', userNameValue);
@@ -39,7 +46,7 @@ function SignIn() {
 
       navigate(`/user`);
     } catch (error) {
-      console.error("Échec de la connexion. Veuillez vérifier vos identifiants.");
+      console.error("Échec de la connexion. Veuillez vérifier vos identifiants.", error);
       dispatch(LoginFailure());
     
     }
