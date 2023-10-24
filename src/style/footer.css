@@ -4,8 +4,7 @@
     display: flex;
     justify-content: center;
     border-top: 2px solid #ccc;
-    padding: 2rem 0 1.5rem;
-    margin-top:35px;
+    padding: 2rem 0 1.5rem; 
   }
   
   .footer-text {

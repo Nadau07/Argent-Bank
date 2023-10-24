@@ -5,6 +5,7 @@ import Account from "../components/Account";
 import Footer from "../components/Footer";
 import InfoUser from "../components/InfoUser";
 import { EditUser } from "../services/redux"; 
+import "../style/User.css"
 
 
 function PageUser() {
@@ -25,10 +26,12 @@ function PageUser() {
     }, [dispatch]);
 
     return (
-        <>
-            <BannerLog name={userName} />
+        <>    
+        <BannerLog/>
+            <div className="body-user">
+        
             <h1> Welcome back <br /> {firstName} {lastName} !</h1>
-            <button onClick={() => setForm(!Form)}>Edit Name</button>
+            <button onClick={() => setForm(!Form)} className="button-edit">Edit Name</button>
             <InfoUser 
             display={Form}
                userName={userName}
@@ -44,20 +47,21 @@ function PageUser() {
             />
 
             <Account
-                title="Argent Bank Checking (x8349)"
-                amount="$2,082.79"
+                title="Argent Bank Savings (x6712)"
+                amount="$10,928.42"
                 description="Available Balance"
                 button="View transactions"
             />
 
             <Account
-                title="Argent Bank Checking (x8349)"
-                amount="$2,082.79"
+                title="Argent Bank Credit Card (x8349)"
+                amount="$184.30"
                 description="Available Balance"
                 button="View transactions"
             />
-
+            </div>
             <Footer />
+        
         </>
     );
 }

@@ -1,12 +1,30 @@
 .user-form{
  padding:5px;
+ width: 30%;
 }
 .user-form-cach{
-    display: none;
+    display: none; 
 }
 
 .form-row{
     display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom:7px;
+}
+.form-row input{
+    padding:8px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.button-save-and-cancel{
+    background-color: #00CB77;
+    color:white;
+    font-weight: bold;
+    font-size:1rem;
+    border-color: #00CB77;
+    width: 25%;
+    padding:8px;
+    margin:auto;
 }

@@ -1,3 +1,4 @@
+import LogoSite from "../img/argentBankLogo.png";
 import "../style/banner.css";
 import { NavLink } from "react-router-dom";
 import {useDispatch} from 'react-redux';
@@ -11,7 +12,7 @@ function Banner({name}) {
   return(
     <nav className="nav">
     <div className="image_banner">
-      <NavLink to={`/`}><img className="image_banner_logo" src="./argentBankLogo.png" alt="Logo Argent Bank"/>
+      <NavLink to={`/`}><img className="image_banner_logo" src={LogoSite} alt="Logo Argent Bank"/>
       </NavLink>
         
       

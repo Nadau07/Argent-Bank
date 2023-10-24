@@ -4,22 +4,20 @@ import "../style/account.css"
 
 function Account({title, amount, description, button}){
     return(
-        <>
-          <div className="bodyUser-container">
+        <div className="body">
   <div className="account">
             <div className="account-info">
-                <p>{title}</p>
-                <p>{amount}</p>
-                <p>{description}</p>
+                <p className="account-checking">{title}</p>
+                <p className="account-money">{amount}</p>
+                <p className="account-balance">{description}</p>
             </div>
             <button className="account-info-button">{button}</button>
-        </div>
 
           </div>
        
       
         
-        </>
+        </div>
     )
 }
 

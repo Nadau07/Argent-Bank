@@ -66,8 +66,8 @@ function InfoUser({
               />
             </div>
             <div className="buttons">
-              <button onClick={ClickChange}>SAVE</button>
-              <button>CANCEL</button>
+              <button onClick={ClickChange} className="button-save-and-cancel">Save</button>
+              <button className="button-save-and-cancel">Cancel</button>
             </div>
           </form>
         </div>
