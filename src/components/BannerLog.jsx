@@ -5,7 +5,7 @@ import {useDispatch} from 'react-redux';
 import { EditUser } from "../services/redux";
 
 
-function Banner({name}) {
+function Banner({userName}) {
 
     const dispatch = useDispatch();
 
@@ -19,11 +19,11 @@ function Banner({name}) {
          
     </div>
    
-   <div className="sign-in-content">
+   <div className="sign-out-content">
 
-   <i className="fa fa-user-circle sign-in-icon">{name}</i>
- 
-        <NavLink to={`/SignIn`} className="sign-in"
+   <i className="fa fa-user-circle sign-in-icon"></i>
+   <p>{userName}</p>
+        <NavLink to={`/SignIn`} className="sign-out"
          onClick={() => {
             dispatch(EditUser());
             localStorage.clear();

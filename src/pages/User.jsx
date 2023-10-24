@@ -27,7 +27,8 @@ function PageUser() {
 
     return (
         <>    
-        <BannerLog/>
+        <BannerLog 
+        userName={userName}/>
             <div className="body-user">
         
             <h1> Welcome back <br /> {firstName} {lastName} !</h1>
