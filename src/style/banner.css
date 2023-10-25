@@ -1,56 +1,50 @@
-*{
-    width: 100%;
-}
-.nav{
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-top:5px;
-}
-
-.image_banner_logo{
-    max-width: 100%;
-    width: 200px;
-    cursor:pointer;
-}
-
-.sign-in-content, .sign-out-content{
-    font-weight: bold;
-    cursor:pointer;
-    font-family: 'Arial';
-    display:flex;
-}
-
-.sign-in, .sign-out{
-    text-decoration: none;
-    color: #2c3e50;
-}
-.sign-in:hover{
-    text-decoration: underline;
-}
-.sign-out:hover{
-    text-decoration: underline;
-}
-/** CSS pour le composant BannerLog **/
-
-
-
-@media (min-width: 920px){
 
 .nav{
     display:flex;
+    align-items:center;
     justify-content: space-between;
 }
+
 .image_banner_logo{
-    float:left;
+    width: 200px;
+    float: left;
 }
 .sign-in-content{
-    display:flex;
-    text-align: right;
-    width: 15%;
+    padding-right:10px;
 }
 .sign-in{
-    margin-right:10px;
+    padding:10px;
+}
+.sign-in-icon{
+    display:flex;
+    justify-content: flex-end;
+    font-size:20px;
+    gap:10px;
+    color:black;
+
+}
+.no-underline{
+      text-decoration: none; 
+      color:black;
+}
+.sign-in-icon:hover{
+ text-decoration: underline;
 }
 
+.sign-out{
+    padding:10px;
+    display:flex; 
+}
+.div-logout{
+    display:flex;
+    justify-content: flex-end;
+    padding-right:10px;
+}
+.icon-logout{
+    width: 20px;
+    padding-right:10px;
+}
+
+.no-underline:hover{
+    text-decoration: underline;
 }

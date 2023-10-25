@@ -3,6 +3,7 @@ import "../style/banner.css";
 import { NavLink } from "react-router-dom";
 import {useDispatch} from 'react-redux';
 import { EditUser } from "../services/redux";
+import IconLogOut from "../img/icon-log-out.svg";
 
 
 function Banner({userName}) {
@@ -11,23 +12,21 @@ function Banner({userName}) {
 
   return(
     <nav className="nav">
-    <div className="image_banner">
+  
       <NavLink to={`/`}><img className="image_banner_logo" src={LogoSite} alt="Logo Argent Bank"/>
       </NavLink>
-        
-      
-         
-    </div>
    
-   <div className="sign-out-content">
+   <div className="sign-out">
 
-   <i className="fa fa-user-circle sign-in-icon"></i>
-   <p>{userName}</p>
-        <NavLink to={`/SignIn`} className="sign-out"
+    <NavLink to={"/SignIn"} className="no-underline">
+    <i className="fa fa-user-circle sign-in-icon">{userName}</i>
+    </NavLink>
+  
+        <NavLink to={`/SignIn`} className="no-underline div-logout"
          onClick={() => {
             dispatch(EditUser());
             localStorage.clear();
-          }}>Log Out</NavLink>
+          }}><img src={IconLogOut} alt="icon-logout" className="icon-logout"/> Log Out</NavLink>
 
    </div>
     
