@@ -24,10 +24,13 @@ function InfoUser({
 
       const ClickChange = (e) => {
         e.preventDefault();
-        EditProfile(token, userName);
-        dispatch(EditUser(userName));
-        localStorage.setItem('userName', userName);
-        navigate(`/user/${userName}`); // sauvegarde la mise à jour du nom de l'utilisateur
+        const newUserName = userName;
+        EditProfile(token, newUserName);
+        dispatch(EditUser({userName : newUserName}));
+        localStorage.setItem('userName', newUserName);
+        navigate(`/user/${newUserName}`);
+
+      
       };
 
   return(

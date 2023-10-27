@@ -1,13 +1,13 @@
 import LogoSite from "../img/argentBankLogo.png";
 import "../style/banner.css";
 import { NavLink } from "react-router-dom";
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import { EditUser } from "../services/redux";
 import IconLogOut from "../img/icon-log-out.svg";
 
 
-function Banner({userName}) {
-
+function Banner() {
+  const userName = useSelector(state => state.user.userInfo.userName);
     const dispatch = useDispatch();
 
   return(
@@ -22,7 +22,7 @@ function Banner({userName}) {
     <i className="fa fa-user-circle sign-in-icon">{userName}</i>
     </NavLink>
   
-        <NavLink to={`/SignIn`} className="no-underline div-logout"
+        <NavLink to={`/`} className="no-underline div-logout"
          onClick={() => {
             dispatch(EditUser());
             localStorage.clear();
