@@ -1,32 +1,31 @@
-.user-form{
- padding:5px;
- width: 30%;
+.user-form {
+  padding: 5px;
+  width: 30%;
 }
-.user-form-cach{
-    display: none; 
-}
-
-.form-row{
-    display: flex;
-    margin-bottom:7px;
-}
-.form-row input{
-    padding:8px;
-}
-.buttons{
-    display: flex;
-    align-items: center;
-    gap:10px;
-    margin-top:20px;
+.user-form-cach {
+  display: none;
 }
 
-.button-save-and-cancel{
-    background-color: #00CB77;
-    color:white;
-    font-weight: bold;
-    font-size:1rem;
-    border-color: #00CB77;
-    padding:8px;
-    margin:auto;
+.form-row {
+  display: flex;
+  margin-bottom: 7px;
+}
+.form-row input {
+  padding: 8px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
+.button-save-and-cancel {
+  background-color: #00cb77;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-color: #00cb77;
+  padding: 8px;
+  margin: auto;
+}

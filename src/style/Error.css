@@ -1,0 +1,23 @@
+.error-body {
+  height: 350px;
+  color: red;
+}
+.error-title {
+  padding-top: 50px;
+  font-size: 50px;
+}
+
+.link-retour {
+  text-decoration: none;
+  color: black;
+  padding-top: 30px;
+}
+
+.error-p {
+  padding-top: 30px;
+}
+
+.link-retour:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

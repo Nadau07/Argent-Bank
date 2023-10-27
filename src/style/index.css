@@ -6,8 +6,6 @@ html {
   color: #2c3e50;
 }
 
-
-
 body {
   margin: 0;
   display: flex;
@@ -16,6 +14,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

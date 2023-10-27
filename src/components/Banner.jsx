@@ -1,31 +1,24 @@
-import LogoSite from "../img/argentBankLogo.webp"
+import LogoSite from "../img/argentBankLogo.webp";
 import "../style/banner.css";
 import { NavLink } from "react-router-dom";
-
+import IconUser from "../img/icon-user.svg";
 
 function Banner() {
-  return(
+  return (
     <nav className="nav">
-   
-      <NavLink to={`/`}><img className="image_banner_logo" src={LogoSite} alt="Logo Argent Bank"/>
+      <NavLink to={`/`}>
+        <img
+          className="image_banner_logo"
+          src={LogoSite}
+          alt="Logo Argent Bank"
+        />
       </NavLink>
-        
-      
-         
-    
-   
-   <div className="sign-in-content">
-   
-        <NavLink to={`/SignIn`} className="sign-in no-underline"> 
-         <i className="fa fa-user-circle sign-in-icon"> Sign In</i>
-       </NavLink>
 
-   </div>
-    
-    
-    
+      <NavLink to={`/SignIn`} className="sign-in">
+        <img src={IconUser} alt="Icon User" className="icon-user" /> Sign In{" "}
+      </NavLink>
     </nav>
-  )
+  );
 }
 
 export default Banner;

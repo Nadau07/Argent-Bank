@@ -1,18 +1,17 @@
-import React from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
-import Body from "../components/Body";
+import Error from "../components/Error";
 import Footer from "../components/Footer";
 
-function Home() {
+function PageError() {
   return (
     <>
       <Banner />
       <Header />
-      <Body />
+      <Error />
       <Footer />
     </>
   );
 }
 
-export default Home;
+export default PageError;

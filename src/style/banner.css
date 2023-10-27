@@ -1,50 +1,73 @@
-
-.nav{
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.image_banner_logo {
+  width: 200px;
+  float: left;
 }
 
-.image_banner_logo{
-    width: 200px;
-    float: left;
-}
-.sign-in-content{
-    padding-right:10px;
-}
-.sign-in{
-    padding:10px;
-}
-.sign-in-icon{
-    display:flex;
-    justify-content: flex-end;
-    font-size:20px;
-    gap:10px;
-    color:black;
-
-}
-.no-underline{
-      text-decoration: none; 
-      color:black;
-}
-.sign-in-icon:hover{
- text-decoration: underline;
+.right-section {
+  display: flex;
+  width: 20%;
 }
 
-.sign-out{
-    padding:10px;
-    display:flex; 
+.sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+  width: 25%;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
-.div-logout{
-    display:flex;
-    justify-content: flex-end;
-    padding-right:10px;
+.sign-in:hover {
+  text-decoration: underline;
 }
-.icon-logout{
-    width: 20px;
-    padding-right:10px;
+/**CSS pour le composant BannerLog **/
+
+.div-logout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+  width: 20%;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.div-logout:hover {
+  text-decoration: underline;
+}
+.icon-logout {
+  width: 15px;
+  padding-right: 5px;
+}
+.div-username {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.div-username:hover {
+  text-decoration: underline;
 }
 
-.no-underline:hover{
-    text-decoration: underline;
+.icon-user {
+  width: 20px;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .sign-in {
+    width: 30%;
+  }
+  .div-username {
+    justify-content: center;
+  }
 }
