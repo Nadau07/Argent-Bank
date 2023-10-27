@@ -1,4 +1,4 @@
-import LogoSite from "../img/argentBankLogo.png"
+import LogoSite from "../img/argentBankLogo.webp"
 import "../style/banner.css";
 import { NavLink } from "react-router-dom";
 

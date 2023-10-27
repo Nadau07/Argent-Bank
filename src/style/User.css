@@ -12,3 +12,9 @@
     width: 15%;
     cursor:pointer;
 }
+
+.infoUser-container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}

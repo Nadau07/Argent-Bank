@@ -16,6 +16,8 @@
 .buttons{
     display: flex;
     align-items: center;
+    gap:10px;
+    margin-top:20px;
 }
 
 .button-save-and-cancel{
@@ -24,7 +26,6 @@
     font-weight: bold;
     font-size:1rem;
     border-color: #00CB77;
-    width: 25%;
     padding:8px;
     margin:auto;
 }

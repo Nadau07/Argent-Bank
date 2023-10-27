@@ -33,13 +33,16 @@ function PageUser() {
         
             <h1> Welcome back <br /> {firstName} {lastName} !</h1>
             <button onClick={() => setForm(!Form)} className="button-edit">Edit Name</button>
-            <InfoUser 
+            <div className="infoUser-container">
+               <InfoUser 
             display={Form}
                userName={userName}
                 firstName={firstName}
                 lastName={lastName}
              
-            />
+            />  
+            </div>
+           
             <Account
                 title="Argent Bank Checking (x8349)"
                 amount="$2,082.79"

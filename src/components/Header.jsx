@@ -1,4 +1,4 @@
-import ImgPresentation from "../img/bank-tree.jpeg"
+import ImgPresentation from "../img/bank-tree.webp"
 import "../style/header.css"
 
 
