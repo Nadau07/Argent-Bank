@@ -6,8 +6,15 @@ import { EditUser } from "../services/redux";
 import IconLogOut from "../img/icon-log-out.svg";
 import IconUser from "../img/icon-user.svg";
 
-function Banner() {
-  const userName = useSelector((state) => state.user.userInfo.userName);
+/**
+ *
+ * @returns {JSX} : Composant affichant la bannière du site : Utilisateur connecté.
+ *
+ */
+
+function BannerLog() {
+  const user = useSelector((state) => state.user.userInfo);
+  const userName = user && user.userName;
   const dispatch = useDispatch();
 
   return (
@@ -20,16 +27,18 @@ function Banner() {
         />
       </NavLink>
 
-      <NavLink to={"/SignIn"} className="div-username">
-        <img src={IconUser} alt="icon User" className="icon-user" />
-        {userName}
-      </NavLink>
+      {userName && (
+        <NavLink to={"/SignIn"} className="div-username">
+          <img src={IconUser} alt="icon User" className="icon-user" />
+          {userName}
+        </NavLink>
+      )}
 
       <NavLink
         to={`/`}
         className="div-logout"
         onClick={() => {
-          dispatch(EditUser());
+          dispatch(EditUser({ userName: "" }));
           localStorage.clear();
         }}
       >
@@ -40,4 +49,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default BannerLog;

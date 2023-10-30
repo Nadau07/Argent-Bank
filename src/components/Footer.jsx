@@ -1,5 +1,10 @@
 import "../style/footer.css";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant le footer (bas-de-page).
+ *
+ */
 function Footer() {
   return (
     <div className="footer">

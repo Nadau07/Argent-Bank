@@ -3,6 +3,12 @@ import IconMoney from "../img/icon-money.webp";
 import IconSecurity from "../img/icon-security.webp";
 import "../style/body.css";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant le contenu de la page d'accueil.
+ *
+ */
+
 function Body() {
   return (
     <>

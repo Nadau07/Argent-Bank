@@ -5,6 +5,12 @@ import { EditProfile } from "../services/api";
 import { EditUser } from "../services/redux";
 import "../style/InfoUser.css";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant le formulaire de modification de l'userName de l'utilisateur.
+ *
+ */
+
 function InfoUser({ firstName, lastName, display }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -13,12 +19,14 @@ function InfoUser({ firstName, lastName, display }) {
 
   const ChangeUserName = (e) => {
     setUserName(e.target.value);
-  }; // met à jour l'état avec la valeur saisie par l'utilisateur
+  };
 
-  const ClickChange = (e) => {
+  const ClickChange = async (e) => {
     e.preventDefault();
     const newUserName = userName;
-    EditProfile(token, newUserName);
+    console.log(token, newUserName);
+    const response = await EditProfile(token, newUserName);
+    console.log(response);
     dispatch(EditUser({ userName: newUserName }));
     localStorage.setItem("userName", newUserName);
     navigate(`/user/${newUserName}`);

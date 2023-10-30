@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 import "../style/Error.css";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant le contenu de la page Erreur.
+ *
+ */
+
 function Error() {
   return (
     <div className="error-body">

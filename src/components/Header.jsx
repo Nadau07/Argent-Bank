@@ -1,6 +1,12 @@
 import ImgPresentation from "../img/bank-tree.webp";
 import "../style/header.css";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant les informations d'introduction.
+ *
+ */
+
 function Header() {
   return (
     <div className="header">

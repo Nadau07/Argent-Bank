@@ -3,6 +3,12 @@ import "../style/banner.css";
 import { NavLink } from "react-router-dom";
 import IconUser from "../img/icon-user.svg";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant la bannière du site : Utilisateur non connecté.
+ *
+ */
+
 function Banner() {
   return (
     <nav className="nav">

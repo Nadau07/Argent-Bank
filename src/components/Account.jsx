@@ -1,6 +1,12 @@
 import React from "react";
 import "../style/account.css";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant les comptes de l'utilisateur.
+ *
+ */
+
 function Account({ title, amount, description, button }) {
   return (
     <div className="body">

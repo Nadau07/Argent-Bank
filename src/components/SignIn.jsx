@@ -5,10 +5,17 @@ import { token, userName, firstName, lastName } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { LoginSuccess, LoginFailure } from "../services/redux";
 
+/**
+ *
+ * @returns {JSX} : Composant affichant le formulaire de connexion.
+ *
+ */
+
 function SignIn() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
+  const [errorMessage, setErrorMessage] = useState("");
 
   //Fonction InputChange : pour mettre à jour formData quand le formulaire est modifié
   //copie formData  et ajoute les nouvelles valeurs
@@ -19,6 +26,7 @@ function SignIn() {
   // Fonction FormSignIn : qui gère la soumission du formulaire de connexion
   const FormSignIn = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
     console.log("FormSignIn");
     try {
       const tokenValue = await token(formData.email, formData.password);
@@ -50,6 +58,7 @@ function SignIn() {
         error
       );
       dispatch(LoginFailure());
+      setErrorMessage("Identifiants incorrects. Veuillez réessayer.");
     }
   };
 
@@ -77,8 +86,9 @@ function SignIn() {
           />
           <div className="checkbox">
             <input type="checkbox" id="remember-me" />
-            <label>Se souvenir de moi</label>
+            <label htmlFor="remember-me">Remember me</label>
           </div>
+          {errorMessage && <div className="error-message">{errorMessage}</div>}
           <button
             type="submit"
             className="modale-connexion-button"
