@@ -1,6 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-//Creation de l'état actuel -  reducer : sert pour les interactions avec l'etat actuel
 const infoSlice = createSlice({
   name: "user",
   initialState: {
@@ -36,10 +35,7 @@ const infoSlice = createSlice({
     },
   },
 });
-/**J'englobe tous mes reducers("slices"/"actions") dans mon store , 
- et je met le store au provider pour 
- qu'il soit accessible a l'ensemble de mes composants
-**/
+
 export const store = configureStore({
   reducer: {
     user: infoSlice.reducer,

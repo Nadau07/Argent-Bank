@@ -17,24 +17,18 @@ function SignIn() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
 
-  //Fonction InputChange : pour mettre à jour formData quand le formulaire est modifié
-  //copie formData  et ajoute les nouvelles valeurs
   const InputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Fonction FormSignIn : qui gère la soumission du formulaire de connexion
   const FormSignIn = async (e) => {
     e.preventDefault();
     setErrorMessage("");
     console.log("FormSignIn");
     try {
       const tokenValue = await token(formData.email, formData.password);
-
       const userNameValue = await userName(tokenValue);
-
       const firstNameValue = await firstName(tokenValue);
-
       const lastNameValue = await lastName(tokenValue);
 
       dispatch(

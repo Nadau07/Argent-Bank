@@ -24,7 +24,6 @@ function InfoUser({ firstName, lastName, display }) {
   const ClickChange = async (e) => {
     e.preventDefault();
     const newUserName = userName;
-    console.log(token, newUserName);
     const response = await EditProfile(token, newUserName);
     console.log(response);
     dispatch(EditUser({ userName: newUserName }));

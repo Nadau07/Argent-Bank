@@ -1,7 +1,5 @@
 //URL API: "http://localhost:3001/api/v1"
 
-//REQUETE POST USER LOGIN : permet à un user de se connecter à son compte .
-
 export async function Login(email, password) {
   let user = {
     email: email,
@@ -14,25 +12,17 @@ export async function Login(email, password) {
     },
     body: JSON.stringify(user),
   });
-  console.log(response);
   return response.json();
 }
 
-//RECUPERATION DU TOKEN :
-
 export async function token(email, password) {
-  console.log(email, password);
   const response = await Login(email, password);
   const token = response.body.token;
   localStorage.setItem("token", token);
-  console.log(token);
   return token;
 }
 
-//REQUETE POST USER PROFILE : permet de récupérer les informations d'un profil user.
-
 export async function Profile(token) {
-  console.log(token);
   let response = await fetch(`http://localhost:3001/api/v1/user/profile`, {
     method: "POST",
     headers: {
@@ -42,8 +32,6 @@ export async function Profile(token) {
   });
   return response;
 }
-
-//RECUPERATION DES INFORMATIONS DE L'USER GRACE AU TOKEN :
 
 export async function ProfileData(token) {
   const response = await Profile(token);
@@ -71,8 +59,6 @@ export async function lastName(token) {
   localStorage.setItem("lastName", lastName);
   return lastName;
 }
-
-//REQUETE PUT PROFILE : permet à un user de mettre à jour son propre profil .
 
 export async function EditProfile(token, NewProfile) {
   let profile = {
