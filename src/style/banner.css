@@ -64,6 +64,20 @@
   padding-right: 5px;
 }
 
+.user-profile{
+  display:flex;
+  justify-content: flex-end;
+  padding-right:10px;
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+
+.user-profile:hover{
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 700px) {
   .sign-in {
     width: 30%;
@@ -71,4 +85,5 @@
   .div-username {
     justify-content: center;
   }
+
 }

@@ -36,6 +36,14 @@ const infoSlice = createSlice({
   },
 });
 
+export const selectAuthToken = (state) => state.user.userInfo.token;
+
+export const selectUserData = (state) => ({
+  userName: state.user.userInfo.userName,
+  firstName: state.user.userInfo.firstName,
+  lastName: state.user.userInfo.lastName,
+});
+
 export const store = configureStore({
   reducer: {
     user: infoSlice.reducer,

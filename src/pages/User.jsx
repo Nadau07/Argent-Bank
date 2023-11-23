@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import BannerLog from "../components/BannerLog";
+import Banner from "../components/Banner";
 import Account from "../components/Account";
 import Footer from "../components/Footer";
 import InfoUser from "../components/InfoUser";
@@ -9,7 +9,7 @@ import "../style/User.css";
 
 function PageUser() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.userInfo); //extraction des données des users
+  const user = useSelector((state) => state.user.userInfo);
   const userName = user ? user.userName : "";
   const firstName = user ? user.firstName : "";
   const lastName = user ? user.lastName : "";
@@ -26,7 +26,7 @@ function PageUser() {
 
   return (
     <>
-      <BannerLog userName={userName} />
+      <Banner userName={userName} />
       <div className="body-user">
       {Form ? null : (
     <h1>
