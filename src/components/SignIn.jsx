@@ -23,6 +23,7 @@ function SignIn() {
 
   const FormSignIn = async (e) => {
     e.preventDefault();
+    
     setErrorMessage("");
     console.log("FormSignIn");
     try {
@@ -60,7 +61,7 @@ function SignIn() {
     <div className="body-connexion">
       <div className="modale-connexion">
         <i className="fa fa-user-circle sign-in-icon"></i>
-        <h1 className="modale-connexion-title">Connexion</h1>
+        <h1 className="modale-connexion-title">Sing In</h1>
         <form className="modale-connexion-form">
           <label className="modale-connexion-label">Username</label>
           <input
@@ -70,7 +71,7 @@ function SignIn() {
             value={formData.email}
             onChange={InputChange}
           />
-          <label className="modale-connexion-label">Mot de passe</label>
+          <label className="modale-connexion-label">Password</label>
           <input
             className="modale-connexion-input"
             type="password"
@@ -88,7 +89,7 @@ function SignIn() {
             className="modale-connexion-button"
             onClick={FormSignIn}
           >
-            Log In
+            Sign In
           </button>
         </form>
       </div>

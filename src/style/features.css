@@ -1,0 +1,22 @@
+.features{
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-item{
+    width: 70%;
+    padding:40px;
+  
+}
+
+.feature-icon {
+    width: 100px;
+    border: 10px solid #00bc77;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+    
+
+  

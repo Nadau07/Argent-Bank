@@ -1,17 +1,17 @@
 .body-connexion {
   position: relative;
-  height: 750px;
+  height: 767px;
   background-color: #12002b;
   font-family: "Arial";
 }
 
 .modale-connexion {
-  width: 300px;
+  width: 260px;
   text-align: center;
   position: absolute;
   background-color: white;
   padding: 2rem;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -35,6 +35,7 @@
   padding: 5px;
   font-size: 1.2rem;
   margin-bottom: 16px;
+  width: 95%;
 }
 
 .modale-connexion-button {
@@ -54,12 +55,12 @@
 }
 .checkbox input {
   position: absolute;
-  right: 140px;
+  right: 124px;
   top: 0;
 }
 .checkbox label {
   position: absolute;
-  right: 72px;
+  right: 60px;
   top: 2px;
 }
 
@@ -70,4 +71,10 @@
   color: red;
   margin-top:36px;
 
+}
+
+@media (min-width: 920px){
+  .body-connexion{
+    height: 703px;
+  }
 }

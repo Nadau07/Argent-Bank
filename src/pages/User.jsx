@@ -28,10 +28,11 @@ function PageUser() {
     <>
       <BannerLog userName={userName} />
       <div className="body-user">
-        <h1>
-          {" "}
-          Welcome back <br /> {firstName} {lastName} !
-        </h1>
+      {Form ? null : (
+    <h1>
+      Welcome back <br /> {firstName} {lastName} !
+    </h1>
+  )}
         <button onClick={() => setForm(!Form)} className="button-edit">
           Edit Name
         </button>
