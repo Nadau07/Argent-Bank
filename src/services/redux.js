@@ -36,9 +36,9 @@ const infoSlice = createSlice({
   },
 });
 
-export const selectAuthToken = (state) => state.user.userInfo.token;
+export const selectToken = (state) => state.user.userInfo.token;
 
-export const selectUserData = (state) => ({
+export const UserData = (state) => ({
   userName: state.user.userInfo.userName,
   firstName: state.user.userInfo.firstName,
   lastName: state.user.userInfo.lastName,

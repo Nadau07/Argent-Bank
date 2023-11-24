@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Banner from "../components/Banner";
 import Account from "../components/Account";
 import Footer from "../components/Footer";
 import InfoUser from "../components/InfoUser";
-import { EditUser } from "../services/redux";
+import { selectToken, EditUser } from "../services/redux"; 
 import "../style/User.css";
 
 function PageUser() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const token = useSelector(selectToken);
   const user = useSelector((state) => state.user.userInfo);
   const userName = user ? user.userName : "";
   const firstName = user ? user.firstName : "";
@@ -16,13 +19,19 @@ function PageUser() {
 
   const [Form, setForm] = useState(false);
 
+
   useEffect(() => {
+    if (!token) {
+      navigate("/SignIn");
+    }
+
     const userNameFromStorage = localStorage.getItem("userName");
     console.log("userNameFromStorage:", userNameFromStorage);
     if (userNameFromStorage) {
       dispatch(EditUser({ userName: userNameFromStorage }));
     }
-  }, [dispatch]);
+  }, [dispatch, navigate, token]);
+
 
   return (
     <>
@@ -33,15 +42,18 @@ function PageUser() {
       Welcome back <br /> {firstName} {lastName} !
     </h1>
   )}
-        <button onClick={() => setForm(!Form)} className="button-edit">
-          Edit Name
-        </button>
+          {!Form && (
+          <button onClick={() => setForm(!Form)} className="button-edit">
+            Edit Name
+          </button>
+        )}
         <div className="infoUser-container">
           <InfoUser
             display={Form}
             userName={userName}
             firstName={firstName}
             lastName={lastName}
+            onCancel={() => setForm(false)}
           />
         </div>
 

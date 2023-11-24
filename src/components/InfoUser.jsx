@@ -11,7 +11,7 @@ import "../style/InfoUser.css";
  *
  */
 
-function InfoUser({ firstName, lastName, display }) {
+function InfoUser({ firstName, lastName, display, onCancel }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [userName, setUserName] = useState(localStorage.getItem("userName"));
@@ -29,6 +29,12 @@ function InfoUser({ firstName, lastName, display }) {
     dispatch(EditUser({ userName: newUserName }));
     localStorage.setItem("userName", newUserName);
     navigate(`/user/${newUserName}`);
+  };
+
+  const ClickCancel = (e) => {
+    e.preventDefault();
+    onCancel();
+    navigate(`/user/${userName}`);
   };
 
   return (
@@ -70,7 +76,7 @@ function InfoUser({ firstName, lastName, display }) {
             <button onClick={ClickChange} className="button-save-and-cancel">
               Save
             </button>
-            <button className="button-save-and-cancel">Cancel</button>
+            <button className="button-save-and-cancel" onClick={ClickCancel} >Cancel</button>
           </div>
         </form>
       </div>

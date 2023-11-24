@@ -1,9 +1,11 @@
 .user-form {
   padding: 5px;
   width: 30%;
+  margin-top:54px;
 }
 .user-form-cach {
   display: none;
+
 }
 
 .form-row {
@@ -17,7 +19,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .button-save-and-cancel {
@@ -28,4 +29,8 @@
   border-color: #00cb77;
   padding: 8px;
   margin: auto;
+}
+
+.h1{
+  margin-top:20px;
 }

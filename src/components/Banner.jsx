@@ -12,12 +12,12 @@ import IconLogOut from "../img/icon-log-out.svg";
  */
 
 
-import { selectAuthToken, selectUserData } from "../services/redux";
+import { selectToken, UserData } from "../services/redux";
 import { LogOut } from "../services/redux";
 
 function Banner() {
-  const token = useSelector(selectAuthToken);
-  const userData = useSelector(selectUserData);
+  const token = useSelector(selectToken);
+  const userData = useSelector(UserData);
   const dispatch = useDispatch();
 
   const handleSignOut = () => {
