@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 import IconUser from "../img/icon-user.svg";
 import { useSelector, useDispatch } from "react-redux";
 import IconLogOut from "../img/icon-log-out.svg";
+import { LogOut } from "../services/redux";
+import { createSelector } from "reselect";
+import { selectToken, UserData as rawUserData } from "../services/redux";
 
 /**
  *
@@ -11,8 +14,7 @@ import IconLogOut from "../img/icon-log-out.svg";
  *
  */
 
-import { selectToken, UserData } from "../services/redux";
-import { LogOut } from "../services/redux";
+const UserData = createSelector([rawUserData], (userData) => userData);
 
 function Banner() {
   const token = useSelector(selectToken);
@@ -20,7 +22,6 @@ function Banner() {
   const dispatch = useDispatch();
 
   const handleSignOut = () => {
-    // Dispatch l'action de déconnexion et réinitialisation des données du profil
     dispatch(LogOut());
   };
 
@@ -35,7 +36,6 @@ function Banner() {
       </NavLink>
 
       {token ? (
-        // Si l'utilisateur est connecté
         <>
           <NavLink to={`/user/:userName`} className="user-profile">
             <img src={IconUser} alt="Icon User" className="icon-user" />{" "}
@@ -52,7 +52,6 @@ function Banner() {
           </NavLink>
         </>
       ) : (
-        // Si l'utilisateur n'est pas connecté
         <NavLink to={`/SignIn`} className="sign-in">
           <img src={IconUser} alt="Icon User" className="icon-user" /> Sign In{" "}
         </NavLink>

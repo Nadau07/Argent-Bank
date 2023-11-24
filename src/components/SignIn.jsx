@@ -25,7 +25,6 @@ function SignIn() {
     e.preventDefault();
 
     setErrorMessage("");
-    console.log("FormSignIn");
     try {
       const tokenValue = await token(formData.email, formData.password);
       const userNameValue = await userName(tokenValue);

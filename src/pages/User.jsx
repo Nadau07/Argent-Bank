@@ -25,7 +25,6 @@ function PageUser() {
     }
 
     const userNameFromStorage = localStorage.getItem("userName");
-    console.log("userNameFromStorage:", userNameFromStorage);
     if (userNameFromStorage) {
       dispatch(EditUser({ userName: userNameFromStorage }));
     }
