@@ -10,8 +10,7 @@ import "../style/body.css";
  */
 
 function Body() {
-
-  const [features, setFeatures] = useState([])
+  const [features, setFeatures] = useState([]);
 
   useEffect(() => {
     fetch("features.json")
@@ -21,13 +20,14 @@ function Body() {
   }, []);
   return (
     <div className="body-feature">
-    {features.map((item)=>(
-      <Features
-      key={item.id}
-      src={item.src}
-      title={item.title}
-      description={item.description}/>
-    ))}
+      {features.map((item) => (
+        <Features
+          key={item.id}
+          src={item.src}
+          title={item.title}
+          description={item.description}
+        />
+      ))}
     </div>
   );
 }

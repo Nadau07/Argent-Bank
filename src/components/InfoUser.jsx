@@ -76,7 +76,9 @@ function InfoUser({ firstName, lastName, display, onCancel }) {
             <button onClick={ClickChange} className="button-save-and-cancel">
               Save
             </button>
-            <button className="button-save-and-cancel" onClick={ClickCancel} >Cancel</button>
+            <button className="button-save-and-cancel" onClick={ClickCancel}>
+              Cancel
+            </button>
           </div>
         </form>
       </div>

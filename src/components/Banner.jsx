@@ -11,7 +11,6 @@ import IconLogOut from "../img/icon-log-out.svg";
  *
  */
 
-
 import { selectToken, UserData } from "../services/redux";
 import { LogOut } from "../services/redux";
 
@@ -42,17 +41,20 @@ function Banner() {
             <img src={IconUser} alt="Icon User" className="icon-user" />{" "}
             {userData.userName}
           </NavLink>
-         
-          <NavLink to={`/SignIn`} onClick={handleSignOut} className="div-logout"> 
-          <img src={IconLogOut} alt="icon-logout" className="icon-logout" />
+
+          <NavLink
+            to={`/SignIn`}
+            onClick={handleSignOut}
+            className="div-logout"
+          >
+            <img src={IconLogOut} alt="icon-logout" className="icon-logout" />
             Sign Out
           </NavLink>
         </>
       ) : (
         // Si l'utilisateur n'est pas connecté
         <NavLink to={`/SignIn`} className="sign-in">
-          <img src={IconUser} alt="Icon User" className="icon-user" />{" "}
-          Sign In{" "}
+          <img src={IconUser} alt="Icon User" className="icon-user" /> Sign In{" "}
         </NavLink>
       )}
     </nav>
@@ -60,4 +62,3 @@ function Banner() {
 }
 
 export default Banner;
-

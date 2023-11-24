@@ -23,7 +23,7 @@ function SignIn() {
 
   const FormSignIn = async (e) => {
     e.preventDefault();
-    
+
     setErrorMessage("");
     console.log("FormSignIn");
     try {
@@ -40,12 +40,6 @@ function SignIn() {
           lastName: lastNameValue,
         })
       );
-
-      localStorage.setItem("token", tokenValue);
-      localStorage.setItem("userName", userNameValue);
-      localStorage.setItem("firstName", firstNameValue);
-      localStorage.setItem("lastName", lastNameValue);
-
       navigate(`/user/${userName}`);
     } catch (error) {
       console.error(
@@ -61,7 +55,7 @@ function SignIn() {
     <div className="body-connexion">
       <div className="modale-connexion">
         <i className="fa fa-user-circle sign-in-icon"></i>
-        <h1 className="modale-connexion-title">Sing In</h1>
+        <h1 className="modale-connexion-title">Sign In</h1>
         <form className="modale-connexion-form">
           <label className="modale-connexion-label">Username</label>
           <input

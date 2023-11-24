@@ -5,7 +5,7 @@ import Banner from "../components/Banner";
 import Account from "../components/Account";
 import Footer from "../components/Footer";
 import InfoUser from "../components/InfoUser";
-import { selectToken, EditUser } from "../services/redux"; 
+import { selectToken, EditUser } from "../services/redux";
 import "../style/User.css";
 
 function PageUser() {
@@ -19,7 +19,6 @@ function PageUser() {
 
   const [Form, setForm] = useState(false);
 
-
   useEffect(() => {
     if (!token) {
       navigate("/SignIn");
@@ -32,17 +31,16 @@ function PageUser() {
     }
   }, [dispatch, navigate, token]);
 
-
   return (
     <>
       <Banner userName={userName} />
       <div className="body-user">
-      {Form ? null : (
-    <h1>
-      Welcome back <br /> {firstName} {lastName} !
-    </h1>
-  )}
-          {!Form && (
+        {Form ? null : (
+          <h1 className="body-user-title">
+            Welcome back <br /> {firstName} {lastName} !
+          </h1>
+        )}
+        {!Form && (
           <button onClick={() => setForm(!Form)} className="button-edit">
             Edit Name
           </button>
